@@ -1,157 +1,245 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Dzień Pączka – 1 stycznia</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(#fff1dc, #ffe4c4);
-        }
+<meta charset="UTF-8">
+<title>Dzień Pączka – 1 stycznia</title>
 
-        header {
-            background-color: #c0392b;
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(#fff0db, #ffe0b2);
+}
 
-        header h1 {
-            font-size: 48px;
-        }
+header {
+    background: radial-gradient(circle, #ff9f43, #d35400);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px;
-        }
+header h1 {
+    font-size: 55px;
+    margin: 0;
+}
 
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+.timer {
+    font-size: 28px;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
 
-        h2 {
-            color: #c0392b;
-        }
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
 
-        /* GALERIA PĄCZKÓW */
-        .donuts {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-        .donut {
-            text-align: center;
-        }
+h2 {
+    color: #d35400;
+    font-size: 32px;
+}
 
-        .donut img {
-            width: 100%;
-            border-radius: 15px;
-        }
+/* GALERIA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-        /* TWÓRCY */
-        .creators {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+.gallery img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
 
-        .person {
-            text-align: center;
-        }
+.gallery img:hover {
+    transform: scale(1.05);
+}
 
-        .person img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #c0392b;
-        }
+/* ZAŁOŻYCIELE */
+.founders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
 
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+.founder {
+    background: #fff7e6;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.founder img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ff9f43;
+}
+
+.founder h3 {
+    font-size: 28px;
+    margin: 15px 0 5px;
+}
+
+/* LISTY */
+ul {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* PĄCZKARNIE */
+.places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.place {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 18px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Dzień Pączka 🍩</h1>
-    <p>1 stycznia – najsłodszy początek roku</p>
+    <h1>🍩 Dzień Pączka 🍩</h1>
+    <p>Najlepsze święto – 1 stycznia</p>
+    <div class="timer" id="timer">Ładowanie odliczania...</div>
 </header>
 
 <main>
 
-    <section>
-        <h2>O święcie</h2>
-        <p>
-            Dzień Pączka to wyjątkowe święto obchodzone 1 stycznia.
-            Tego dnia wszyscy zaczynają nowy rok od pysznych pączków,
-            uśmiechu i wspólnej radości.
-        </p>
-    </section>
+<section>
+<h2>O święcie</h2>
+<p>
+Dzień Pączka to wyjątkowe święto obchodzone 1 stycznia każdego roku.
+To dzień rozpoczęcia nowego roku w najsłodszy możliwy sposób – z pączkiem w ręku.
+</p>
+</section>
 
-    <section>
-        <h2>Galeria pączków</h2>
-        <div class="donuts">
-            <div class="donut">
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Pączek z lukrem">
-                <p>Pączek z lukrem</p>
-            </div>
-            <div class="donut">
-                <img src="https://images.unsplash.com/photo-1514511547117-f0c7a75a8a07" alt="Pączek z czekoladą">
-                <p>Pączek czekoladowy</p>
-            </div>
-            <div class="donut">
-                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Pączek z nadzieniem">
-                <p>Pączek z nadzieniem</p>
-            </div>
-            <div class="donut">
-                <img src="https://images.unsplash.com/photo-1605472568486-6d4a47dcb5c4" alt="Kolorowe pączki">
-                <p>Kolorowe pączki</p>
-            </div>
-        </div>
-    </section>
+<section>
+<h2>🍩 OGROMNA GALERIA PĄCZKÓW 🍩</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+<img src="https://images.unsplash.com/photo-1514511547117-f0c7a75a8a07">
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+<img src="https://images.unsplash.com/photo-1605472568486-6d4a47dcb5c4">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+<img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60">
+<img src="https://images.unsplash.com/photo-1589987607627-616cac63b5cb">
+<img src="https://images.unsplash.com/photo-1603052875302-d376b7c0638a">
+</div>
+</section>
 
-    <section>
-        <h2>Twórcy święta</h2>
-        <div class="creators">
+<section>
+<h2>Jak jeść pączki?</h2>
+<ul>
+<li>Klasycznie – odgryzając z każdej strony</li>
+<li>Na raz – cały pączek (tylko dla odważnych)</li>
+<li>Z lukrem najpierw</li>
+<li>Dzieląc się z przyjaciółmi</li>
+<li>Z herbatą, kawą lub kakao</li>
+</ul>
+</section>
 
-            <div class="person">
-                <img src="images/ola.jpg" alt="Ola">
-                <h3>Ola</h3>
-                <p>Ciemny brąz włosów</p>
-            </div>
+<section>
+<h2>Historia Dnia Pączka</h2>
+<p>
+Święto zostało stworzone, aby każdy mógł zacząć nowy rok z uśmiechem.
+Zamiast stresu – pączek. Zamiast diety – radość.
+</p>
+</section>
 
-            <div class="person">
-                <img src="images/michu.jpg" alt="Michał">
-                <h3>Michał</h3>
-                <p>Ciemny brąz (jaśniejszy niż u Oli)</p>
-            </div>
+<section>
+<h2>🍩 ZAŁOŻYCIELE ŚWIĘTA 🍩</h2>
+<div class="founders">
 
-            <div class="person">
-                <img src="images/wiktor.jpg" alt="Wiktor">
-                <h3>Wiktor</h3>
-                <p>Ciemny brąz włosów</p>
-            </div>
+<div class="founder">
+<img src="images/ola.jpg">
+<h3>OLA</h3>
+<p>Współtwórczyni idei Dnia Pączka</p>
+</div>
 
-        </div>
-    </section>
+<div class="founder">
+<img src="images/wiko.jpg">
+<h3>WIKO</h3>
+<p>Pomysłodawca i pączkowy ekspert</p>
+</div>
+
+<div class="founder">
+<img src="images/michu.jpg">
+<h3>MICHU</h3>
+<p>Miłośnik pączków i tradycji</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Najlepsze pączkarnie</h2>
+<div class="places">
+<div class="place">🍩 Tradycyjna Pączkarnia</div>
+<div class="place">🍩 Słodki Zakątek</div>
+<div class="place">🍩 Pączek & Spółka</div>
+<div class="place">🍩 Lukrowy Raj</div>
+</div>
+</section>
 
 </main>
 
 <footer>
-    <p>© 2025 Dzień Pączka – stworzony przez Olę, Wiktora i Michała</p>
+© Dzień Pączka – OLA • WIKO • MICHU
 </footer>
+
+<script>
+function updateTimer() {
+    const now = new Date();
+    let year = now.getFullYear();
+    let target = new Date(year, 0, 1);
+
+    if (now > target) {
+        target = new Date(year + 1, 0, 1);
+    }
+
+    const diff = target - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("timer").innerHTML =
+        Do Dnia Pączka pozostało: <b>${days}d ${hours}h ${minutes}m ${seconds}s</b>;
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
 
 </body>
 </html>
