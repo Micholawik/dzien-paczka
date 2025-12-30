@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dzień Pączka – 1 stycznia</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(#fff1dc, #ffe4c4);
+        }
+
+        header {
+            background-color: #c0392b;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #c0392b;
+        }
+
+        /* GALERIA PĄCZKÓW */
+        .donuts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .donut {
+            text-align: center;
+        }
+
+        .donut img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* TWÓRCY */
+        .creators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .person {
+            text-align: center;
+        }
+
+        .person img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #c0392b;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dzień Pączka 🍩</h1>
+    <p>1 stycznia – najsłodszy początek roku</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>O święcie</h2>
+        <p>
+            Dzień Pączka to wyjątkowe święto obchodzone 1 stycznia.
+            Tego dnia wszyscy zaczynają nowy rok od pysznych pączków,
+            uśmiechu i wspólnej radości.
+        </p>
+    </section>
+
+    <section>
+        <h2>Galeria pączków</h2>
+        <div class="donuts">
+            <div class="donut">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Pączek z lukrem">
+                <p>Pączek z lukrem</p>
+            </div>
+            <div class="donut">
+                <img src="https://images.unsplash.com/photo-1514511547117-f0c7a75a8a07" alt="Pączek z czekoladą">
+                <p>Pączek czekoladowy</p>
+            </div>
+            <div class="donut">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Pączek z nadzieniem">
+                <p>Pączek z nadzieniem</p>
+            </div>
+            <div class="donut">
+                <img src="https://images.unsplash.com/photo-1605472568486-6d4a47dcb5c4" alt="Kolorowe pączki">
+                <p>Kolorowe pączki</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Twórcy święta</h2>
+        <div class="creators">
+
+            <div class="person">
+                <img src="images/ola.jpg" alt="Ola">
+                <h3>Ola</h3>
+                <p>Ciemny brąz włosów</p>
+            </div>
+
+            <div class="person">
+                <img src="images/michu.jpg" alt="Michał">
+                <h3>Michał</h3>
+                <p>Ciemny brąz (jaśniejszy niż u Oli)</p>
+            </div>
+
+            <div class="person">
+                <img src="images/wiktor.jpg" alt="Wiktor">
+                <h3>Wiktor</h3>
+                <p>Ciemny brąz włosów</p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Dzień Pączka – stworzony przez Olę, Wiktora i Michała</p>
+</footer>
+
+</body>
+</html>
